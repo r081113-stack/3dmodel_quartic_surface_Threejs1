@@ -98,7 +98,9 @@
   }
 
   function addHelpers() {
-    scene.add(new THREE.AxesHelper(2.5));
+    const axesHelper = new THREE.AxesHelper(2.5);
+axesHelper.setColors(0x000000, 0x000000, 0x000000); // x, y, z 軸をすべて黒（#000000）に設定
+scene.add(axesHelper);
     const grid = new THREE.GridHelper(4, 10, 0xdddddd, 0xeeeeee);
     grid.position.y = -2.0;
     scene.add(grid);
